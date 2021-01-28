@@ -18,7 +18,7 @@ function outputAllItems(items) {
 //
 // Ex.:
 //   > getAllEvens([7, 8, 10, 1, 2, 2]);
-//   [8, 2, 2]
+//   [8, 10, 2, 2]
 function getAllEvens(nums) {
   const evenNums = [];
 
@@ -82,6 +82,7 @@ function getRange(start, stop) {
   for (let num = start; num < stop; num += 1) {
     nums.push(num);
   }
+  return nums;
 }
 
 
@@ -97,7 +98,9 @@ function censorVowels(word) {
     if ('aeiou'.includes(letter)) {
       chars.push('*');
     }
-    chars.push(letter);
+    else {
+      chars.push(letter);
+    }
   }
 
   return chars.join('');
